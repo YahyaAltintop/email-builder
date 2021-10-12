@@ -18,7 +18,7 @@
     "jquery": "^3.6.0"
   },
   "repository": {
-		"type": "git",
-		"url": "https://github.com/YahyaAltintop/email-builder"
-	},
+     "type": "git",
+      "url": "https://github.com/YahyaAltintop/email-builder"
+  },
 }
