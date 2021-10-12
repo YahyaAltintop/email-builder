@@ -8,10 +8,10 @@ Build email template or email body.
 - Generate pure HTML code
 - HTML can be output.
 
-## Prerequisite
+## Requirements
 
-1. **[Jquery](https://nodejs.org/en/)**
-1. **[Bootstrap](https://nodejs.org/en/)**
+1. **[Jquery](https://jquery.com/)**
+1. **[Bootstrap -v 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/)**
 
 ## Licence 
 
