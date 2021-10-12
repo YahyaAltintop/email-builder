@@ -15,4 +15,4 @@ Build email template or email body.
 
 ## Licence 
 
-- [Mit](https://github.com/YahyaAltintop/email-builder/blob/master/LICENSE)
+- [MIT](https://github.com/YahyaAltintop/email-builder/blob/master/LICENSE)
