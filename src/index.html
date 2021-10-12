@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Builder</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="card">
+            <div class="card-header bg-white p-1" style="border-bottom: 1px solid #9c9c9c ">
+                <div class="col-12 p-0 d-flex">
+                    <span onclick="$('#fontStylePopover').popover('toggle');" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Font Style"><i id="fontStylePopover" class="fa fa-font"></i></span>
+                    <span onclick="$('#textAlignPopover').popover('toggle');" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Text Align"><i id="textAlignPopover"
+                            class="fa fa-align-justify"></i></span>
+                    <span onclick="$('#textSizePopover').popover('toggle');" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Text Height"><i id="textSizePopover"
+                            class="fa fa-text-height"></i></span>
+                    <span onclick="document.execCommand('bold')" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Bold"><i class="fa fa-bold"></i></span>
+                    <span onclick="document.execCommand('italic')" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Italic"><i class="fa fa-italic"></i></span>
+                    <span onclick="document.execCommand('underline')" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Underline"><i class="fa fa-underline"></i></span>
+                    <span onclick="$('#LinkModal').modal('show')" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Link"><i class="fa fa-link"></i></span>
+                    <span onclick="$('#colorPalette')[0].click()" class="header-span btn btn-link p-2 m-1" data-toggle="tooltip" title="Text Color"><input
+                            type="color" value="#000000" id="colorPalette" oninput="ColorChange(this)"><i
+                            class="fa fa-palette"></i></span>
+                    <span onclick="$('#txtFileInput').trigger('click')" class="header-span btn btn-link p-2 m-1"
+                        data-toggle="tooltip" title="Upload Image"><i class="fa fa-image"></i></span>
+                    <span onclick="RemoveFormats()" class="header-span btn btn-link p-2 m-1" data-toggle="tooltip"
+                        title="Remove Format"><i class="fa fa-remove-format"></i></span>
+                    <span class="header-span btn btn-link p-2 m-1 d-none" data-toggle="tooltip" title="Remove Photo"
+                        id="btnRemovePhoto"><i class="fa fa-minus-circle"></i></span>
+                </div>
+            </div>
+    
+            <input type="file" class="d-none" accept=".png,.jpg,.jpeg" id="txtFileInput"
+                onchange="$('#dvBody').append(`<div class='imgParentDiv'><img onclick='ImageClick(event.target)' src='${window.URL.createObjectURL(this.files[0])}' class='img-fluid' draggable='fase' /></div><div><br /></div>`);this.value = null" />
+    
+            <div class="card-body p-0">
+                <div contenteditable="true" ondrop="return fase;" spellcheck="fase" id="dvBody">
+                    <div>&nbsp;</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="LinkModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius:10px;">
+                <div class="modal-header pb-1">
+                    <h4 class="modal-title text-primary">Link Oluştur</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-12">
+                        <label>URL <span class="text-danger">*</span></label>
+                        <input type="url" placeholder="http://www.google.com/" class="form-control" id="txtURL" />
+                    </div>
+                    <div class="col-12 mt-2">
+                        <label>Başlık</label>
+                        <input type="text" class="form-control" id="txtBaslik" />
+                    </div>
+                </div>
+                <div class="modal-footer pt-1">
+                    <div class="col-12 text-right">
+                        <button class="btn btn-link" data-dismiss="modal">Vazgeç</button>
+                        <button class="btn btn-primary" onclick="AddLink()">Kaydet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+    integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script><script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/src/main.js"></script>
