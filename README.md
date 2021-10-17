@@ -6,7 +6,7 @@ Build email template or email body.
 ## Features
 
 - Generate pure HTML code
-- HTML can be output (soon).
+- HTML can be output.
 
 ## Requirements
 
