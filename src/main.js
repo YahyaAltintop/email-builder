@@ -171,4 +171,18 @@ function RemoveFormats() {
     document.execCommand("removeFormat");
 }
 
+function ReviewTemplate(){
+
+    $("#ReviewModalBody").html($("#dvBody").html());
+
+    $("#ReviewTemplateModal").modal("show");
+}
+
+function ShowTemplateHTML(){
+
+    $("#TemplateHTMLBody").text($("#dvBody").html());
+    
+    $("#TemplateHTMLModal").modal("show");
+}
+
 $('#LinkModal').on("hidden.bs.modal", () => $('#LinkModal input').val('').css("border", ""));

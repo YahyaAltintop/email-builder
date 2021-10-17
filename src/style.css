@@ -13,6 +13,10 @@
     pointer-events: none;
 }
 
+#TemplateHTMLBody {
+    user-select: all;
+}
+
 .card .fal,.popover .fal {
     font-weight: bold;
 }

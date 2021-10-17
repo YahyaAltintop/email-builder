@@ -11,7 +11,12 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="card">
+        <div class="row mt-2">
+            <div class="col-12 text-right">
+                 <button class="btn btn-primary" onclick="ReviewTemplate()">Review Template</button>
+            </div>
+        </div> 
+        <div class="card mt-2">
             <div class="card-header bg-white p-1" style="border-bottom: 1px solid #9c9c9c ">
                 <div class="col-12 p-0 d-flex">
                     <span onclick="$('#fontStylePopover').popover('toggle');" class="header-span btn btn-link p-2 m-1"
@@ -56,8 +61,8 @@
     <div class="modal fade" id="LinkModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="border-radius:10px;">
-                <div class="modal-header pb-1">
-                    <h4 class="modal-title text-primary">Link Oluştur</h4>
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary">Create Link</h4>
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -65,22 +70,64 @@
                 <div class="modal-body">
                     <div class="col-12">
                         <label>URL <span class="text-danger">*</span></label>
-                        <input type="url" placeholder="http://www.google.com/" class="form-control" id="txtURL" />
+                        <input type="url" placeholder="https://www.google.com/" class="form-control" id="txtURL" />
                     </div>
-                    <div class="col-12 mt-2">
-                        <label>Başlık</label>
+                    <div class="col-12 mt-2 mb-2">
+                        <label>Title</label>
                         <input type="text" class="form-control" id="txtBaslik" />
                     </div>
                 </div>
                 <div class="modal-footer pt-1">
                     <div class="col-12 text-right">
-                        <button class="btn btn-link" data-dismiss="modal">Vazgeç</button>
-                        <button class="btn btn-primary" onclick="AddLink()">Kaydet</button>
+                        <button class="btn btn-link" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-primary" onclick="AddLink()">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="ReviewTemplateModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+            <div class="modal-content" style="border-radius:10px;">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary">Review</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="ReviewModalBody">
+                </div>
+                <div class="modal-footer pt-1">
+                    <div class="col-12 text-right p-0">
+                        <button class="btn btn-link" data-dismiss="modal">Ok</button>
+                        <button class="btn btn-primary" onclick="ShowTemplateHTML()">Export HTML</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="TemplateHTMLModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-md">
+            <div class="modal-content" style="border-radius:10px;">
+                <div class="modal-header">
+                    <h4 class="modal-title text-primary">Template HTML</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="TemplateHTMLBody">
+                </div>
+                <div class="modal-footer pt-1">
+                    <div class="col-12 text-right p-0">
+                        <button class="btn btn-link" title="Copy Clipboard" onclick="return navigator.clipboard.writeText($('#dvBody').html());"><span class="fa fa-copy fa-lg"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
