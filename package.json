@@ -1,20 +1,24 @@
 {
-  "name": "a",
+  "name": "@YahyaAltintop/email-builder",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "HTML email generator.",
+  "main": "index.html",
   "directories": {
-    "lib": "lib"
+    "lib": "node_modules"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yahya Altıntop",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@popperjs/core": "^2.10.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0"
-  }
+  },
+  "repository": {
+     "type": "git",
+      "url": "https://github.com/YahyaAltintop/email-builder"
+  },
 }
