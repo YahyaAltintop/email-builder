@@ -34,13 +34,7 @@
           </div>
         </div>
 
-        <input
-          type="file"
-          class="d-none"
-          accept=".png,.jpg,.jpeg"
-          id="txtFileInput"
-          onchange="$('#dvBody').append(`<div class='imgParentDiv'><img onclick='ImageClick(event.target)' src='${window.URL.createObjectURL(this.files[0])}' class='img-fluid' draggable='fase' /></div><div><br /></div>`);this.value = null"
-        />
+        <input type="file" class="d-none" accept=".png,.jpg,.jpeg" id="txtFileInput" />
 
         <div class="card-body p-0">
           <div contenteditable="true" spellcheck="false" id="dvBody">
