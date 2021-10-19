@@ -51,7 +51,7 @@
                 onchange="$('#dvBody').append(`<div class='imgParentDiv'><img onclick='ImageClick(event.target)' src='${window.URL.createObjectURL(this.files[0])}' class='img-fluid' draggable='fase' /></div><div><br /></div>`);this.value = null" />
     
             <div class="card-body p-0">
-                <div contenteditable="true" ondrop="return fase;" spellcheck="fase" id="dvBody">
+                <div contenteditable="true" spellcheck="false" id="dvBody">
                     <div>&nbsp;</div>
                 </div>
             </div>
@@ -88,7 +88,7 @@
     </div>
 
     <div class="modal fade" id="ReviewTemplateModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
             <div class="modal-content" style="border-radius:10px;">
                 <div class="modal-header">
                     <h4 class="modal-title text-primary">Review</h4>
@@ -109,7 +109,7 @@
     </div>
 
     <div class="modal fade" id="TemplateHTMLModal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-md">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md">
             <div class="modal-content" style="border-radius:10px;">
                 <div class="modal-header">
                     <h4 class="modal-title text-primary">Template HTML</h4>
