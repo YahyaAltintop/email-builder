@@ -9,6 +9,7 @@ let mutation = new MutationObserver((m) => {
   if (node?.firstChild?.nodeType == 1) {
     if (!node.firstChild.matches("img") && node.className == "imgParentDiv") {
       node.className = "";
+      node.style = "";
     }
   }
 });
@@ -125,6 +126,20 @@ function ImageClick(imgElement) {
     }
   };
 }
+
+$("#txtFileInput").on("change", function () {
+  $("#dvBody").append(`
+    <div class='imgParentDiv'>
+        <img onclick='ImageClick(event.target)' 
+             src='${window.URL.createObjectURL(this.files[0])}' 
+             class='img-fluid' 
+             draggable='false' />
+    </div>
+    <br />
+  `);
+
+  this.value = null;
+});
 
 function AddLink() {
   const regex = /[-a-zA-Z0-9@@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@@:%_\+.~#?&//=]*)?/gi;
