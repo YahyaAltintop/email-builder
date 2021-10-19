@@ -7,7 +7,7 @@ Build email template or email body.
 - Generate pure HTML code
 - Preview tamplate.
 - HTML can be output.
-- Resizable images can be added. **[Here an example](/img/resizeimg.png)**
+- Resizable images can be added. **[Here is an example](/img/resizeimg.png)**
 
 ## Requirements
 
