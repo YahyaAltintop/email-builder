@@ -1,102 +1,102 @@
-
 #dvBody {
-    outline: none;
-    padding: 1em;
- }
+  outline: none;
+  padding: 1em;
+}
 
 #colorPalette {
-    position: absolute;
-    opacity: 0;
-    width: 35px;
-    height: 100%;
-    cursor: pointer;
-    pointer-events: none;
+  position: absolute;
+  opacity: 0;
+  width: 35px;
+  height: 100%;
+  cursor: pointer;
+  pointer-events: none;
 }
 
 #TemplateHTMLBody {
-    user-select: all;
+  user-select: all;
 }
 
-.card .fal,.popover .fal {
-    font-weight: bold;
+.card .fal,
+.popover .fal {
+  font-weight: bold;
 }
 
 .header-span {
-    border-radius: 4px;
+  border-radius: 4px;
 }
 
 .header-span i {
-    color: black;
+  color: black;
 }
 
 .header-span:last-child i {
-    color: red;
+  color: red;
 }
 
 .header-span:hover {
-    background-color: #dddedf;
+  background-color: #dddedf;
 }
 
 .imgParentDiv {
-    min-height: 200px;
-    min-width: 200px;
-    max-width: 100%;
-    resize: both;
-    overflow: auto;
-    grid-area: resize;
+  min-height: 200px;
+  min-width: 200px;
+  max-width: 100%;
+  resize: both;
+  overflow: auto;
+  grid-area: resize;
 }
 
 .img-fluid {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .list-group-item {
-    cursor: pointer;
-    user-select: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .fontStylePopover .list-group-item:nth-child(1) {
-    font-family: Arial;
+  font-family: Arial;
 }
 
 .fontStylePopover .list-group-item:nth-child(2) {
-    font-family: Calibri;
+  font-family: Calibri;
 }
 
 .fontStylePopover .list-group-item:nth-child(3) {
-    font-family: Corbel;
+  font-family: Corbel;
 }
 
 .fontStylePopover .list-group-item:nth-child(4) {
-    font-family: Consolas;
+  font-family: Consolas;
 }
 
 .fontStylePopover .list-group-item:nth-child(5) {
-    font-family: Georgia;
+  font-family: Georgia;
 }
 
 .fontStylePopover .list-group-item:nth-child(6) {
-    font-family: 'Times New Roman';
+  font-family: "Times New Roman";
 }
 
 .fontStylePopover {
-    height: 188px;
-    overflow-y: auto;
+  height: 188px;
+  overflow-y: auto;
 }
 
 .fontStylePopover::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
 
 .fontStylePopover::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .fontStylePopover::-webkit-scrollbar-thumb {
-    background: #888;
+  background: #888;
 }
 
 .fontStylePopover::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
