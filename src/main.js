@@ -19,6 +19,8 @@ $(document).ready(() => {
     childList: true,
   });
 
+  $("#MailOptionsHeaderDiv").css("height", innerHeight - (innerHeight * 10 / 100))
+
   $("#fontStylePopover").popover({
     placement: "top",
     html: true,
