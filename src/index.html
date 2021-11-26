@@ -17,8 +17,8 @@
           <button class="btn btn-primary" onclick="ReviewTemplate()">Review Template</button>
         </div>
       </div>
-      <div class="card mt-2">
-        <div class="card-header bg-white p-1" style="border-bottom: 1px solid #9c9c9c">
+      <div class="card mt-2 overflow-auto" id="MailOptionsHeaderDiv">
+        <div class="card-header bg-white p-1 sticky-top" style="border-bottom: 1px solid #9c9c9c">
           <div class="col-12 p-0 d-flex">
             <span onclick="$('#fontStylePopover').popover('toggle');" class="header-span btn btn-link p-2 m-1" data-toggle="tooltip" title="Font Style"><i id="fontStylePopover" class="fa fa-font"></i></span>
             <span onclick="$('#textAlignPopover').popover('toggle');" class="header-span btn btn-link p-2 m-1" data-toggle="tooltip" title="Text Align"> <i id="textAlignPopover" class="fa fa-align-justify"></i></span>
@@ -36,7 +36,7 @@
 
         <input type="file" class="d-none" accept=".png,.jpg,.jpeg" id="txtFileInput" />
 
-        <div class="card-body p-0">
+        <div class="card-body p-0" onclick="this.firstElementChild.focus()">
           <div contenteditable="true" spellcheck="false" id="dvBody">
             <div>&nbsp;</div>
           </div>
